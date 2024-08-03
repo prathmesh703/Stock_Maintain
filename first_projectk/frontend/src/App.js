@@ -8,15 +8,7 @@ function App() {
   return (
 
     <Body/>
-    // <div className="App">
-    //   <Header/>
-      
-    //   <div className='flex  justify-between mx-16 '>
-     
-    //   <Slip/>
-    //   <Container/>
-    //   </div>
-    // </div>
+    
   );
 }
 

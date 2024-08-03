@@ -1,13 +1,19 @@
 import React, { useState } from "react";
 import Header from "./header.js";
+import { RiStockLine } from "react-icons/ri";
+
 const Register =()=>{
     const [isLogin , setIsLogin]=useState(false)
     const LoginHandler=()=>{
         setIsLogin(!isLogin)
     }
     return(<>
-    <div className=" text-white">
-<Header user={isLogin}/>
+    <div className=" flex gap-2 absolute z-10 text-3xl font-bold p-4 text-white">
+    
+    <RiStockLine size={40} />
+    Stock Maintainer
+    
+        
     </div>
        
         <div className="w-full">
@@ -22,8 +28,8 @@ const Register =()=>{
                     <input  className="outline-none rounded-sm bg-gray-800 w-10/12 my-2  p-2 text-sm text-white" placeholder="UserName"></input>
                     {!isLogin && <input placeholder="Email" className="outline-none w-10/12 rounded-sm bg-gray-800 my-2 p-2 text-sm text-white"></input>}
                     <input placeholder="Password" className="outline-none w-10/12 rounded-sm bg-gray-800 my-1 p-2 text-sm text-white"></input>
-                    <p className="text-sm text-white">{isLogin?"Create New Account!":"Already an User!"} <span onClick={LoginHandler} className="text-sm text-blue-400 underline">{isLogin?"SigUp":"Login"}</span></p>
-                    <button className="p-2 py-1 flex gap-1  hover:bg-red-600 rounded-md text-white  bg-red-500">{isLogin?"Login":"SignUp"}</button>
+                    <p className="text-sm text-white">{isLogin?"Create New Account!":"Already an User!"} <span onClick={LoginHandler} className="text-sm cursor-pointer text-blue-400 underline">{isLogin?"SigUp":"Login"}</span></p>
+                    <button className="p-2 py-1 flex gap-1   hover:bg-red-600 rounded-md text-white  bg-red-500">{isLogin?"Login":"SignUp"}</button>
                 </div>
             </form>
         </div>
