@@ -2,18 +2,19 @@ import React from 'react'
 
 const Slip = () => {
   return (
-    <div className='flex w-[30%] h-auto flex-col justify-between rounded-md shadow-md shadow-red-500 gap-4 border p-2 '>
-        <div className='border'>
+    <div className='flex bg-slate-300 w-[30%] h-auto flex-col justify-between rounded-md shadow-md  gap-4 border p-2 '>
+        <div className='border bg-white rounded-md'>
             items..........
         </div>
         
+        
+        <div className='border rounded-md'>
         <div className='border'> 
-            <textarea placeholder='add the note if you want'>
+            <textarea className='w-full  ' placeholder='add the note if you want....'>
 
             </textarea>
         </div>
-        <div className='border'>
-            <button>
+            <button className=' border rounded-md bg-red-500 w-full'>
                 make checkout
             </button>
         </div>
