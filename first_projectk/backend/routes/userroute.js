@@ -89,7 +89,7 @@ router.post("/login",async function (req,res){
         },JWT_SECRET);
         console.log(token)
         
-        return res.cookie("token",token,{httpOnly:true}).status(200).json({
+        return res.status(200).json({
             msg:"logged in ",
             user,
             success:true
