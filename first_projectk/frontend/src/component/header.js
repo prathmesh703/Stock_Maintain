@@ -3,7 +3,7 @@ import { TiHome } from "react-icons/ti";
 import { VscGraphLine } from "react-icons/vsc";
 import { GiTakeMyMoney } from "react-icons/gi";
 import { RiStockLine } from "react-icons/ri";
-import { Link, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 
 const Header = () => {
 

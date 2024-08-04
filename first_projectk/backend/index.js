@@ -2,7 +2,8 @@ const express=require("express");
 const  {database} = require("./config/db.js")
 const cookieParser=require("cookie-parser")
 const cors = require("cors")
-const {userRoute} = require("./routes/userroute.js")
+const {userRoute} = require("./routes/userroute.js");
+const { stocksRouter } = require("./routes/stocksadditon/stocksadd.js");
 
 const app=express();
 
@@ -19,6 +20,7 @@ app.use(cors({
 
 }))
 app.use("/api/v1/user",userRoute)
+app.use("/api/v1/user/stocks",stocksRouter)
 app.listen(3002,()=>{
     console.log("server is on ")
 });

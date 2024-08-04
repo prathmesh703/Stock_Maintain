@@ -27,6 +27,11 @@ const Addstocks = () => {
           className=" text-center border"
           placeholder="cost"
         />
+        <input
+          type="number"
+          className=" text-center border"
+          placeholder="quantity"
+        />
         <button className="border rounded-md bg-red-500">Add</button>
       </form>
       <form className="flex w-full h-full flex-col gap-10 justify-between border bg-slate-300 rounded-md p-5 text-center">
