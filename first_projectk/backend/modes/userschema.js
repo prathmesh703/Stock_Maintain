@@ -43,11 +43,13 @@ const itemsschema = new mongoose.Schema({
   }
 });
 
+
+
 const categoryschema = new mongoose.Schema({
   category: {
     type: String,
     required: true,
-  },
+  }
 });
 
 const User = mongoose.model("User", userschema);

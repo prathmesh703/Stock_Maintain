@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../header";
+import Header from "../Header";
 import Addstocks from "./addstocks";
 import Displaycard from "./Displaycard";
 
@@ -12,11 +12,11 @@ const Stocks = () => {
           <Addstocks />
         </div>
         <div className="  p-4 w-full flex  gap-3 flex-col ">
-          <Displaycard/>
-          <Displaycard/>
-          <Displaycard/>
-          <Displaycard/>
-          <Displaycard/>
+          <Displaycard />
+          <Displaycard />
+          <Displaycard />
+          <Displaycard />
+          <Displaycard />
         </div>
       </div>
     </div>

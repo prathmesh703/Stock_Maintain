@@ -2,8 +2,8 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Register from "./Register.js";
 import Browse from "./Browse.js";
-import Home from "./home.js";
 import Stocks from "./stocks/stocks.js";
+import Home from "./Home.js";
 const Body = () => {
   const appRouter = createBrowserRouter([
     {
@@ -16,7 +16,7 @@ const Body = () => {
     },
     {
       path: "/",
-      element: <Home />,
+      element: <Home/>,
     },
     {
       path: "/stocks",

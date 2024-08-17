@@ -88,6 +88,11 @@ router.post("/login",async function (req,res){
             userId:User._id
         },JWT_SECRET);
         console.log(token)
+        res.cookie("token",token,{
+            httpOnly:true,
+            secure:true,
+            maxAge:1*24*60*60*1000
+        });
         
         return res.status(200).json({
             msg:"logged in ",

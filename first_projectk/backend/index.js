@@ -21,6 +21,6 @@ app.use(cors({
 }))
 app.use("/api/v1/user",userRoute)
 app.use("/api/v1/user/stocks",stocksRouter)
-app.listen(3002,()=>{
+app.listen(8787,()=>{
     console.log("server is on ")
 });

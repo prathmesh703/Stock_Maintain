@@ -2,7 +2,7 @@ const express=require("express");
 const { isauthentication } = require("../../authentication/auth");
 const router=express.Router();
 const zod = require('zod');
-const { item } = require("../../modes/userschema");
+const { item, cat } = require("../../modes/userschema");
 
 
 
@@ -33,6 +33,17 @@ router.post("/",isauthentication,async (req,res)=>{
         stock
     })
 })
+
+router.post("/addcat",isauthentication,async(req,res)=>{
+    const category=req.body.category;
+    await cat.create({
+        category:category
+    })
+    return res.status(200).json({
+        msg:"category added"
+    })
+})
+
 router.get("/",isauthentication,async (req,res)=>{
     const stocks=await item.find({})
     if(!stocks){

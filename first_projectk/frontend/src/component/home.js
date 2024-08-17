@@ -1,7 +1,7 @@
 import React from 'react'
-import Header from './header'
 import Slip from './slip'
 import Container from './container'
+import Header from './Header'
 
 const Home = () => {
   return (

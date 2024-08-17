@@ -12,7 +12,7 @@ const Browse =()=>{
     return(
        
         <div>
-            <Header/>
+           
             {navigator.isProfit && <Profit/>}
             {navigator.isStock && <Stock/>}
             {navigator.isHome && <Home/>}
