@@ -35,12 +35,23 @@ router.post("/",isauthentication,async (req,res)=>{
 })
 
 router.post("/addcat",isauthentication,async(req,res)=>{
-    const category=req.body.category;
-    await cat.create({
+    try {
+        const category=req.body.category;
+    const cates=await cat.create({
         category:category
     })
     return res.status(200).json({
-        msg:"category added"
+        cates
+    })
+    } catch (error) {
+        console.log(error)
+    }
+})
+router.get("/categories",isauthentication,async(req,res)=>{
+    
+   const category=await cat.find({});
+    return res.status(200).json({
+       category
     })
 })
 

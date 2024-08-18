@@ -85,12 +85,12 @@ router.post("/login",async function (req,res){
             })
         }
          const  token=await jwt.sign({
-            userId:User._id
+            userId:user._id
         },JWT_SECRET);
         console.log(token)
         res.cookie("token",token,{
-            httpOnly:true,
-            secure:true,
+            
+            
             maxAge:1*24*60*60*1000
         });
         
